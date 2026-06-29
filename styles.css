@@ -123,17 +123,31 @@ strong {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+h2 {
+  font-size: 3rem;
+  background: linear-gradient(135deg, #ffd86b, #e8b52a, #b8860b);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h3 {
+  background: linear-gradient(135deg, #ffd86b, #e8b52a, #b8860b);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .hero .text p {
   font-size: 1.5rem;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 20px;
   display: flex;
   gap: 2rem;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
 }
 .text {
   color: aliceblue;
@@ -142,23 +156,29 @@ strong {
   gap: 1rem;
   flex: 1;
 }
+.text-2 {
+  position: relative;
+  gap: 2rem;
+}
 .img img {
   max-width: 500px;
   width: 100%;
+  z-index: 1;
 }
 .img {
   position: relative;
+  z-index: 1;
 }
 .badge-rounded {
   position: absolute;
-  top: 20px;
-  right: -25px;
-  border: 1px solid #c99617;
+  top: 180px;
+  right: -80px;
+  border: 5px solid #c99617;
   border-radius: 50%;
   width: fit-content;
-  padding: 20px;
-  width: 150px;
-  height: 150px;
+  padding: 25px;
+  width: 180px;
+  height: 180px;
   text-align: center;
   align-items: center;
 
@@ -166,14 +186,66 @@ strong {
   display: flex;
   flex-direction: column;
 }
+.circle {
+  position: absolute;
+  top: 150px;
+  filter: drop-shadow(0 0 10px rgba(232, 181, 42, 0.6));
+  border: 5px solid #c99617;
+  border-radius: 50%;
+  z-index: -1;
+  width: 500px;
+  height: 500px;
+}
 .badge-rounded strong {
   font-size: 2rem;
 }
 .badge-rounded hr {
   width: 100%;
-  color: #e8b52a;
+  background-color: #e8b52a;
+}
+.sobre .text {
+  flex: 1;
+}
+.sobre .text-2 {
+  display: flex;
+  align-items: center;
+}
+.sobre .text-2 .img {
+  flex: 1;
+}
+.sobre .text-2 .list {
+  flex: 1;
 }
 
+.item-sobre {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.item-img svg {
+  width: 40px;
+  fill: #ffd86b;
+}
+.item-img {
+  border: 3px solid #ffd86b;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  align-items: center;
+  justify-items: center;
+  display: flex;
+  justify-content: center;
+}
+.item-sobre-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .cards {
   background: #181818;
 

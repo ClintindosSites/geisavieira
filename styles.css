@@ -223,6 +223,7 @@ h3 {
 .sobre .text-2 {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 .sobre .text-2 .img {
   flex: 1;
@@ -418,11 +419,9 @@ footer {
   }
   .sobre .container {
     display: flex;
+    flex-direction: column;
   }
-  .sobre .container .text-2 {
-    display: flex;
-    flex-direction: row;
-  }
+
   .sobre .text {
     text-align: left;
   }
@@ -467,7 +466,7 @@ footer {
     margin-bottom: 20px;
   }
   .sobre img {
-    margin-bottom: -20px;
+    margin-bottom: 3px;
   }
   .list .item-sobre {
     display: flex;
@@ -477,12 +476,21 @@ footer {
   .sobre .container {
     display: flex;
   }
-  .sobre .container .text-2 {
-    display: flex;
-    flex-direction: row;
-  }
+
   .sobre .text {
     text-align: left;
+  }
+  .sobre .text-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .sobre .text-2 .img,
+  .sobre .text-2 .list {
+    width: 100%;
+    flex: none;
   }
   .products-grid {
     display: flex;
@@ -639,5 +647,40 @@ footer {
     width: 100%;
 
     flex: none;
+  }
+  .sobre .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .sobre .text,
+  .sobre .text-2 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .sobre .text-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sobre .text-2 .img {
+    order: 1;
+  }
+
+  .sobre .text-2 .list {
+    order: 2;
+  }
+  .footer svg {
+    width: 42px;
+  }
+  .redes-sociais a:hover svg {
+    fill: purple;
+    background-color: gold;
+    border-radius: 50%;
+
+    transform: translateY(-5px) scale(1.1);
+  }
+  .footer {
+    text-align: center;
   }
 }

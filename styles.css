@@ -72,6 +72,13 @@ h3 {
   width: 100%;
   border: 5px solid rgba(232, 181, 42, 0.15);
 }
+.logo2 img {
+  width: 100%;
+  max-width: 200px;
+}
+.logos {
+  display: flex;
+}
 header {
   border-bottom: 1px solid rgba(232, 181, 42, 0.15);
 
@@ -119,6 +126,7 @@ p {
 strong {
   color: #e8b52a;
 }
+
 .hero .text h1 {
   font-size: 3rem;
   background: linear-gradient(135deg, #ffd86b, #e8b52a, #b8860b);
@@ -368,18 +376,61 @@ footer {
   .container {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   .hero .container {
     gap: 60px;
+    text-align: left;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-
+  .hero .text {
+    flex: 1;
+  }
+  .hero .text h1 {
+    line-height: 1;
+  }
+  .hero .img {
+    flex: 1;
+  }
+  .hero .img img {
+    margin-bottom: -80px;
+  }
+  .hero .ctaBtn {
+    width: fit-content;
+  }
+  .badge-rounded {
+    left: -20px;
+    top: -120px;
+  }
+  .sobre {
+    margin-bottom: 20px;
+  }
+  .sobre img {
+    margin-bottom: -20px;
+  }
+  .list .item-sobre {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+  }
+  .sobre .container {
+    display: flex;
+  }
+  .sobre .container .text-2 {
+    display: flex;
+    flex-direction: row;
+  }
+  .sobre .text {
+    text-align: left;
+  }
   .products-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
   }
-
   .text-2 {
     flex-direction: column;
   }
@@ -393,110 +444,83 @@ footer {
   }
 }
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .logo img {
-    max-width: 90px;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-
   .container {
     flex-direction: column;
     text-align: center;
-    gap: 40px;
+    align-items: center;
+    margin-top: 60px;
   }
 
-  .hero .text h1 {
-    font-size: 2.4rem;
+  .hero .container {
+    gap: 60px;
+    text-align: left;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .hero .ctaBtn {
+    width: fit-content;
   }
 
-  h2 {
-    font-size: 2rem;
+  .sobre {
+    margin-top: 4px;
+    margin-bottom: 20px;
+  }
+  .sobre img {
+    margin-bottom: -20px;
+  }
+  .list .item-sobre {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+  }
+  .sobre .container {
+    display: flex;
+  }
+  .sobre .container .text-2 {
+    display: flex;
+    flex-direction: row;
+  }
+  .sobre .text {
+    text-align: left;
+  }
+  .products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .text-2 {
+    flex-direction: column;
   }
 
-  .hero .text p {
-    font-size: 1.15rem;
-  }
-
-  .img img {
-    max-width: 320px;
-  }
-
-  .circle {
-    width: 320px;
-    height: 320px;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+  .list {
+    width: 100%;
   }
 
   .badge-rounded {
-    width: 120px;
-    height: 120px;
-
-    top: 20px;
-    right: 10px;
-
-    padding: 15px;
+    right: -30px;
   }
-
-  .badge-rounded strong {
-    font-size: 1.3rem;
-  }
-
-  .item-sobre {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .products-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    width: 100%;
-  }
-
-  .cards {
-    width: 100%;
-    max-width: 380px;
-    margin: auto;
-  }
-
-  .ctaBtn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .redes-sociais svg {
-    width: 55px;
-    height: 55px;
-  }
-
-  footer {
-    text-align: center;
+  .circle {
+    max-width: 350px;
+    max-height: 350px;
   }
 }
 @media (max-width: 480px) {
   header {
-    padding: 15px;
+    padding: 0;
   }
 
   .container {
     padding: 15px;
+    flex-direction: column;
   }
   .hero {
     margin-bottom: 5px;
+  }
+  .hero .container {
+    flex-direction: column;
   }
   .hero .text h1 {
     font-size: 2.2rem;
@@ -518,7 +542,9 @@ footer {
   .img img {
     max-width: 260px;
   }
-
+  .hero .container .img {
+    margin-bottom: 57px;
+  }
   .circle {
     width: 260px;
     height: 260px;
@@ -529,6 +555,7 @@ footer {
     height: 110px;
     font-size: 0.8rem;
     left: -30px;
+    top: -10px;
   }
 
   .badge-rounded strong {
@@ -560,6 +587,7 @@ footer {
     margin-top: -35px;
     margin-bottom: 35px;
   }
+
   .item-sobre {
     flex-direction: row;
     text-align: left;
@@ -579,5 +607,37 @@ footer {
     justify-content: center;
     display: flex;
     margin: 0 auto;
+  }
+  .sobre .text-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .sobre .text {
+    flex: 1;
+  }
+  .sobre .text-2 {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 30px;
+  }
+  .circle {
+    top: 100px;
+    left: 20px;
+  }
+  .sobre .text-2 .img {
+    width: 100%;
+
+    flex: none;
+  }
+
+  .sobre .text-2 .list {
+    width: 100%;
+
+    flex: none;
   }
 }

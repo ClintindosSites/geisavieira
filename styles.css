@@ -582,14 +582,16 @@ footer {
   .product-text p {
     font-size: 0.9rem;
   }
-
-  .cards {
-    min-height: unset;
-    gap: 1rem;
-    padding: 15px;
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
   }
-  .img-item {
-    margin-bottom: 30px;
+  .cards {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
   .list {
     margin-top: -35px;
